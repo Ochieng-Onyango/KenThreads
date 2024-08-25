@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service {
+    flex-basis: calc(33.33% - 1rem);
+    background-color: #f4f4f4;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media {
+    margin-top: 1rem;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #f4f4f4;
+}
+
+#testimonials {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.testimonial-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    flex: 0 0 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
+}
+
+.client-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.client-name {
+    font-weight: bold;
+}
+
+.testimonial-nav {
+    margin-top: 1rem;
+}
+
+.testimonial-nav button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-nav button:hover {
+    background-color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .service {
+        flex-basis: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture {
+        margin-bottom: 1rem;
+    }
+}
