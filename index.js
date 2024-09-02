@@ -20,30 +20,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Testimonial Slider
-    const testimonials = document.querySelectorAll('.testimonial');
-    const prevButton = document.getElementById('prevTestimonial');
-    const nextButton = document.getElementById('nextTestimonial');
+     const testimonials = document.querySelectorAll('.testimonial');
     let currentTestimonial = 0;
 
     function showTestimonial(index) {
         testimonials.forEach((testimonial, i) => {
-            testimonial.style.transform = `translateX(${100 * (i - index)}%)`;
+            testimonial.classList.remove('active');
+            if (i === index) {
+                testimonial.classList.add('active');
+            }
         });
     }
 
-    function nextTestimonial() {
+    function showNextTestimonial() {
         currentTestimonial = (currentTestimonial + 1) % testimonials.length;
         showTestimonial(currentTestimonial);
     }
 
-    function prevTestimonial() {
-        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-        showTestimonial(currentTestimonial);
-    }
-
-    nextButton.addEventListener('click', nextTestimonial);
-    prevButton.addEventListener('click', prevTestimonial);
-
     // Show the first testimonial initially
     showTestimonial(currentTestimonial);
+
+    // Change testimonial every 5 seconds
+    setInterval(showNextTestimonial, 5000);
 });
